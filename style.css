@@ -1,0 +1,159 @@
+:root {
+  --bg: #f5f7fb;
+  --surface: #ffffff;
+  --text: #1c2430;
+  --muted: #566277;
+  --line: #e1e6ee;
+  --accent: #2357a5;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 16px;
+}
+
+body {
+  margin: 0;
+  font-family: Inter, "Segoe UI", Roboto, Arial, sans-serif;
+  line-height: 1.65;
+  color: var(--text);
+  background: linear-gradient(180deg, #f8faff 0%, var(--bg) 40%, #f3f5f9 100%);
+}
+
+.page {
+  max-width: 920px;
+  margin: 2.5rem auto;
+  padding: 2.2rem 2rem;
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  box-shadow: 0 8px 30px rgba(23, 33, 56, 0.05);
+}
+
+h1,
+h2 {
+  line-height: 1.25;
+  letter-spacing: -0.01em;
+  margin-top: 2rem;
+  margin-bottom: 0.8rem;
+  color: #111a29;
+}
+
+h1 {
+  font-size: clamp(1.5rem, 2vw, 2rem);
+  border-bottom: 1px solid var(--line);
+  padding-bottom: 0.55rem;
+}
+
+h2 {
+  font-size: clamp(1.2rem, 1.5vw, 1.45rem);
+}
+
+p,
+ul {
+  margin-top: 0.7rem;
+  margin-bottom: 0.9rem;
+}
+
+ul {
+  padding-left: 1.25rem;
+}
+
+li + li {
+  margin-top: 0.35rem;
+}
+
+a {
+  color: var(--accent);
+  text-decoration-thickness: 1px;
+  text-underline-offset: 2px;
+}
+
+a:hover {
+  color: #173f7c;
+}
+
+img {
+  display: block;
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  margin: 0.35rem 0 0.9rem;
+  border-radius: 12px;
+  border: 1px solid var(--line);
+  background: #eef2f8;
+}
+
+hr {
+  border: none;
+  border-top: 1px solid var(--line);
+  margin: 1.6rem 0;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 1rem;
+  margin-bottom: 0.8rem;
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  overflow: hidden;
+  background: #fbfcff;
+}
+
+td {
+  padding: 0.7rem 0.85rem;
+  border-bottom: 1px solid var(--line);
+  vertical-align: top;
+}
+
+tr:first-child td {
+  font-weight: 600;
+  color: #182338;
+  background: #f0f4fb;
+}
+
+tr:last-child td {
+  border-bottom: none;
+}
+
+td p {
+  margin: 0;
+}
+
+@media (max-width: 760px) {
+  .page {
+    margin: 0;
+    border-radius: 0;
+    border-left: none;
+    border-right: none;
+    padding: 1.3rem 1rem 1.8rem;
+  }
+
+  table,
+  tr,
+  td {
+    display: block;
+    width: 100%;
+  }
+
+  tr {
+    border-bottom: 1px solid var(--line);
+  }
+
+  tr:first-child {
+    position: sticky;
+    top: 0;
+    z-index: 1;
+  }
+
+  td {
+    border: none;
+    padding: 0.45rem 0.25rem;
+  }
+}
